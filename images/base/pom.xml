@@ -31,7 +31,7 @@
                         </goals>
                         <configuration>
                             <artifact>org.apache.sling:org.apache.sling.feature.launcher:1.1.10:jar</artifact>
-                            <outputDirectory>${project.basedir}/target/classes/cms/slingcms</outputDirectory>
+                            <outputDirectory>${project.basedir}/target/classes/oec</outputDirectory>
                             <stripVersion>true</stripVersion>
                         </configuration>
                     </execution>

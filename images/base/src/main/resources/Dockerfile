@@ -6,4 +6,5 @@ WORKDIR /opt/oec
 
 COPY oec/ /opt/oec/
 
-RUN mkdir -p /opt/custom/seed && mkdir -p /opt/custom/runtime
+RUN mkdir -p /opt/custom/seed && mkdir -p /opt/custom/runtime \
+    mkdir -p /opt/secrets/seed && mkdir -p /opt/secrets/runtime
