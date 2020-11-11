@@ -15,9 +15,7 @@ SLING_USERNAME="${SLING_USERNAME:-admin}"
 SLING_PASSWORD="${SLING_PASSWORD:-admin}"
 
 echo "Creating composite seed..."
-java -jar org.apache.sling.feature.launcher.jar \
-    -f /opt/oec/seed/*.far \
-    -f /opt/custom/seed/*.far &
+java -jar org.apache.sling.feature.launcher.jar ${SEED_PARAMS} &
 SLING_PID=$!
 echo "Sling PID: ${SLING_PID}"
 
