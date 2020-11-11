@@ -2,9 +2,9 @@ FROM adoptopenjdk:11-jre-openj9
 LABEL org.opencontainers.image.source https://github.com/OpenExperienceCloud/cloud-openexperience-content
 
 # Configure the parameters used for seeding and running the repository
-ARG SEED_PARAMS="-f /opt/oec/seed/*.slingosgifeature -f /opt/custom/seed/*.slingosgifeature"
+ARG SEED_PARAMS="-f /opt/oec/setup/features/*.slingosgifeature"
 ENV SEED_PARAMS=${SEED_PARAMS}
-ARG RUNTIME_PARAMS="-f /opt/oec/runtime/*.slingosgifeature -f /opt/custom/runtime/*.slingosgifeature"
+ARG RUNTIME_PARAMS="-f /opt/oec/feaures/*.slingosgifeature"
 ENV RUNTIME_PARAMS=${RUNTIME_PARAMS}
 
 # Configure directory
