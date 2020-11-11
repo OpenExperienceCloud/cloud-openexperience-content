@@ -31,4 +31,4 @@ jobs:
     - name: Maven Build
       run: mvn -B clean install --file pom.xml -s apache_settings.xml
     - name: Deploy Docker Images
-      run: mvn -B clean package --file /images/pom.xml -s apache_settings.xml
+      run: mvn -B clean package --file ./images/pom.xml -s apache_settings.xml
