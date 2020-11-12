@@ -22,7 +22,7 @@ jobs:
         java-version: 1.8
     - name: Install docker
       uses: docker-practice/actions-setup-docker@master
-    - name: Login to Github Container Registry
+    - name: Login to jFrog Container Registry
       uses: docker/login-action@v1
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
