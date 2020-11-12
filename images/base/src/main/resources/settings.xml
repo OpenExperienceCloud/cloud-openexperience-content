@@ -17,6 +17,17 @@
                         <enabled>true</enabled>
                     </snapshots>
                 </repository>
+                <repository>
+                    <id>oec</id>
+                    <name>Open Experience Cloud Repository</name>
+                    <url>https://openexperiencecloud.jfrog.io/artifactory/maven/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
             </repositories>
         </profile>
     </profiles>

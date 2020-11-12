@@ -50,12 +50,12 @@ License. -->
 
     <distributionManagement>
         <snapshotRepository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/OpenExperienceCloud/cloud-openexperience-content</url>
+            <id>oec-maven</id>
+            <url>https://openexperiencecloud.jfrog.io/artifactory/maven/</url>
         </snapshotRepository>
         <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/OpenExperienceCloud/cloud-openexperience-content</url>
+            <id>oec-maven</id>
+            <url>https://openexperiencecloud.jfrog.io/artifactory/maven/</url>
         </repository>
     </distributionManagement>
 

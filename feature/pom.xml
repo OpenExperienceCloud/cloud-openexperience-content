@@ -184,32 +184,8 @@ License. -->
                     </scans>
                     <archives>
                         <archive>
-                            <classifier>open-experience-content-author-seed-far</classifier>
-                            <includeClassifier>open-experience-content-author-seed</includeClassifier>
-                        </archive>
-                        <archive>
-                            <classifier>open-experience-content-author-runtime-far</classifier>
-                            <includeClassifier>open-experience-content-author-runtime</includeClassifier>
-                        </archive>
-                        <archive>
-                            <classifier>open-experience-content-standalone-seed-far</classifier>
-                            <includeClassifier>open-experience-content-standalone-seed</includeClassifier>
-                        </archive>
-                        <archive>
-                            <classifier>open-experience-content-standalone-runtime-far</classifier>
-                            <includeClassifier>open-experience-content-standalone-runtime</includeClassifier>
-                        </archive>
-                        <archive>
                             <classifier>open-experience-content-standalone-far</classifier>
                             <includeClassifier>open-experience-content-standalone</includeClassifier>
-                        </archive>
-                        <archive>
-                            <classifier>open-experience-content-renderer-seed-far</classifier>
-                            <includeClassifier>open-experience-content-renderer-seed</includeClassifier>
-                        </archive>
-                        <archive>
-                            <classifier>open-experience-content-renderer-runtime-far</classifier>
-                            <includeClassifier>open-experience-content-renderer-runtime</includeClassifier>
                         </archive>
                     </archives>
                 </configuration>
@@ -221,6 +197,7 @@ License. -->
                             <goal>aggregate-features</goal>
                             <goal>analyse-features</goal>
                             <goal>attach-features</goal>
+                            <goal>attach-featurearchives</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -257,133 +234,6 @@ License. -->
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>deploy-open-experience-content-author-runtime</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${project.basedir}/target/slingfeature-tmp/feature-open-experience-content-author-runtime.json</file>
-                            <repositoryId>github</repositoryId>
-                            <url>${project.distributionManagement.repository.url}</url>
-                            <groupId>${project.groupId}</groupId>
-                            <artifactId>${project.artifactId}</artifactId>
-                            <version>${project.version}</version>
-                            <packaging>slingosgifeature</packaging>
-                            <classifier>open-experience-content-author-runtime</classifier>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>deploy-open-experience-content-author-seed</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${project.basedir}/target/slingfeature-tmp/feature-open-experience-content-author-seed.json</file>
-                            <repositoryId>github</repositoryId>
-                            <url>${project.distributionManagement.repository.url}</url>
-                            <groupId>${project.groupId}</groupId>
-                            <artifactId>${project.artifactId}</artifactId>
-                            <version>${project.version}</version>
-                            <packaging>slingosgifeature</packaging>
-                            <classifier>open-experience-content-author-seed</classifier>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>deploy-open-experience-content-renderere-runtime</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${project.basedir}/target/slingfeature-tmp/feature-open-experience-content-renderer-runtime.json</file>
-                            <repositoryId>github</repositoryId>
-                            <url>${project.distributionManagement.repository.url}</url>
-                            <groupId>${project.groupId}</groupId>
-                            <artifactId>${project.artifactId}</artifactId>
-                            <version>${project.version}</version>
-                            <packaging>slingosgifeature</packaging>
-                            <classifier>open-experience-content-renderere-runtime</classifier>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>deploy-open-experience-content-renderer-seed</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${project.basedir}/target/slingfeature-tmp/feature-open-experience-content-renderer-seed.json</file>
-                            <repositoryId>github</repositoryId>
-                            <url>${project.distributionManagement.repository.url}</url>
-                            <groupId>${project.groupId}</groupId>
-                            <artifactId>${project.artifactId}</artifactId>
-                            <version>${project.version}</version>
-                            <packaging>slingosgifeature</packaging>
-                            <classifier>open-experience-content-renderer-seed</classifier>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>deploy-open-experience-content-standalone-runtime</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${project.basedir}/target/slingfeature-tmp/feature-open-experience-content-standalone-runtime.json</file>
-                            <repositoryId>github</repositoryId>
-                            <url>${project.distributionManagement.repository.url}</url>
-                            <groupId>${project.groupId}</groupId>
-                            <artifactId>${project.artifactId}</artifactId>
-                            <version>${project.version}</version>
-                            <packaging>slingosgifeature</packaging>
-                            <classifier>open-experience-content-standalone-runtime</classifier>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>deploy-open-experience-content-standalone-seed</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${project.basedir}/target/slingfeature-tmp/feature-open-experience-content-standalone-seed.json</file>
-                            <repositoryId>github</repositoryId>
-                            <url>${project.distributionManagement.repository.url}</url>
-                            <groupId>${project.groupId}</groupId>
-                            <artifactId>${project.artifactId}</artifactId>
-                            <version>${project.version}</version>
-                            <packaging>slingosgifeature</packaging>
-                            <classifier>open-experience-content-standalone-seed</classifier>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>deploy-standalone</id>
-                        <phase>deploy</phase>
-                        <goals>
-                            <goal>deploy-file</goal>
-                        </goals>
-                        <configuration>
-                            <file>${project.basedir}/target/cloud.openexperience.content-${project.version}.jar</file>
-                            <repositoryId>github</repositoryId>
-                            <url>${project.distributionManagement.repository.url}</url>
-                            <groupId>${project.groupId}</groupId>
-                            <artifactId>cloud.openexperience.content</artifactId>
-                            <version>${project.version}</version>
-                            <packaging>jar</packaging>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 

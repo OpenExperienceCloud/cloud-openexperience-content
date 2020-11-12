@@ -11,8 +11,8 @@
 #        and limitations under the License.
 #
 
-SLING_USERNAME="${SLING_USERNAME:-admin}"
-SLING_PASSWORD="${SLING_PASSWORD:-admin}"
+SLING_AUTH="${SLING_AUTH:-'admin:admin'}"
+COMPOSITE_SEED_PARAMS="${COMPOSITE_SEED_PARAMS:-'-f /opt/oec/setup/features/*.slingosgifeature'}"
 
 echo "Creating composite seed..."
 java -jar org.apache.sling.feature.launcher.jar ${SEED_PARAMS} &

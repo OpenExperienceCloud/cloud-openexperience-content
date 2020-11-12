@@ -36,7 +36,7 @@
                             <arguments>
                                 <argument>rmi</argument>
                                 <argument>-f</argument>
-                                <argument>ghcr.io/${GITHUB_ORG}/${project.artifactId}:${project.version}</argument>
+                                <argument>openexperiencecloud.jfrog.io/docker/${project.artifactId}:${project.version}</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -53,7 +53,7 @@
                             <arguments>
                                 <argument>build</argument>
                                 <argument>-t</argument>
-                                <argument>ghcr.io/${GITHUB_ORG}/${project.artifactId}:${project.version}</argument>
+                                <argument>openexperiencecloud.jfrog.io/docker/${project.artifactId}:${project.version}</argument>
                                 <argument>.</argument>
                             </arguments>
                         </configuration>
@@ -69,7 +69,7 @@
                             <workingDirectory>${project.basedir}/target/classes</workingDirectory>
                             <arguments>
                                 <argument>push</argument>
-                                <argument>ghcr.io/${GITHUB_ORG}/${project.artifactId}:${project.version}</argument>
+                                <argument>openexperiencecloud.jfrog.io/docker/${project.artifactId}:${project.version}</argument>
                             </arguments>
                         </configuration>
                     </execution>
