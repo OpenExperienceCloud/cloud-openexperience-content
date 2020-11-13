@@ -12,10 +12,13 @@
 #
 
 SLING_AUTH="${SLING_AUTH:-'admin:admin'}"
-COMPOSITE_SEED_PARAMS="${COMPOSITE_SEED_PARAMS:-'-f /opt/oec/setup/features/*.slingosgifeature'}"
+DEFAULT_COMPOSITE_SEED_FEATURES="/opt/oec/setup/features/*.slingosgifeature"
+COMPOSITE_SEED_FEATURES="${COMPOSITE_SEED_FEATURES:-${DEFAULT_COMPOSITE_SEED_FEATURES}}"
+DEFAULT_MAVEN_REPOS="file:///root/.m2/repository,https://repo.maven.apache.org/maven2,https://repository.apache.org/content/groups/snapshots,https://repository.apache.org/snapshots,https://openexperiencecloud.jfrog.io/artifactory/maven/"
+MAVEN_REPOSITORIES="${MAVEN_REPOSITORIES:-${DEFAULT_MAVEN_REPOS}}"
 
 echo "Creating composite seed..."
-java -jar org.apache.sling.feature.launcher.jar ${SEED_PARAMS} &
+java -jar org.apache.sling.feature.launcher.jar -f ${COMPOSITE_SEED_FEATURES} -u ${MAVEN_REPOSITORIES} &
 SLING_PID=$!
 echo "Sling PID: ${SLING_PID}"
 
