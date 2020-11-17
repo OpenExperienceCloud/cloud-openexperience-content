@@ -92,6 +92,7 @@ License. -->
                         <aggregate>
                             <classifier>open-experience-content-standalone-runtime</classifier>
                             <filesInclude>**/*.json</filesInclude>
+                            <filesExclude>seed/*.json</filesExclude>
                             <includeArtifact>
                                 <groupId>org.apache.sling</groupId>
                                 <artifactId>org.apache.sling.cms.feature</artifactId>
@@ -111,6 +112,7 @@ License. -->
                         <aggregate>
                             <classifier>open-experience-content-standalone</classifier>
                             <filesInclude>**/*.json</filesInclude>
+                            <filesExclude>seed/*.json</filesExclude>
                             <includeArtifact>
                                 <groupId>org.apache.sling</groupId>
                                 <artifactId>org.apache.sling.cms.feature</artifactId>
@@ -142,6 +144,7 @@ License. -->
                         <aggregate>
                             <classifier>open-experience-content-renderer-runtime</classifier>
                             <filesInclude>**/*.json</filesInclude>
+                            <filesExclude>seed/*.json</filesExclude>
                             <includeArtifact>
                                 <groupId>org.apache.sling</groupId>
                                 <artifactId>org.apache.sling.cms.feature</artifactId>

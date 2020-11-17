@@ -1,0 +1,9 @@
+{
+    "repoinit:TEXT|true": [
+        "create path /apps/sling-cms/content/start(sling:Page)",
+        "create path /apps/sling-cms/content/start/jcr:content(nt:unstructured)",
+        "create path /apps/sling-cms/content/start/jcr:content/container(nt:unstructured)",
+        "create path /apps/sling-cms/content/start/jcr:content/container/richtext(nt:unstructured)",
+        "set properties on /apps/sling-cms/content/start/jcr:content/container/richtext\r\n  set text{String} to \"<h2><strong>Open</strong> Experience Cloud</h2><p>To begin, select Manage // Sites on the left to add your first website.</p><br/><br/>\"\r\nend"
+    ]
+}
